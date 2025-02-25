@@ -5,10 +5,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 @Data
 @Entity
-public class Compra extends BaseClass {
+@EqualsAndHashCode(callSuper = true)
+public class Compra extends BaseClasse {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
