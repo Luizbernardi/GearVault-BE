@@ -23,25 +23,9 @@ public class Usuario extends BaseClasse {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private Status status;
-
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
     private Perfil perfil;
 
     @Column(length = 20)
     private String telefone;
-
-    @Column(length = 255)
-    private String fotoPerfil;
-
-    @Column(name = "ultimo_login_at")
-    private LocalDateTime ultimoLoginAt;
-
-    @Column(nullable = false)
-    private Integer tentativasLogin = 0;
-
-    @Column(length = 500)
-    private String authToken;
 
 }
