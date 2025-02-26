@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import java.util.Set;
+
 @Data
 @Entity
 @EqualsAndHashCode(callSuper = true)
@@ -28,6 +30,9 @@ public class Fornecedor extends BaseClasse {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "endereco_id", referencedColumnName = "id")
     private Endereco endereco;
+
+    @OneToMany(mappedBy = "fornecedor", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Compra> compras;
 
     @Column(name = "observacoes", columnDefinition = "TEXT")
     private String observacoes;

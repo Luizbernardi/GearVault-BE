@@ -6,6 +6,7 @@ import lombok.EqualsAndHashCode;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.Set;
 
 @Data
 @Entity
@@ -41,5 +42,8 @@ public class Item extends BaseClasse {
 
     @Column(name = "data_saida")
     private LocalDate dataSaida;
+
+    @OneToMany(mappedBy = "item", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<ItemCompra> compras;
 
 }
