@@ -38,8 +38,4 @@ public abstract class BaseClasse {
     @Column(name = "is_deleted", nullable = false   )
     private boolean isDeleted = false;
 
-    @Version
-    @Column(name = "version")
-    private Integer version;
-
 }
