@@ -1,6 +1,6 @@
-# API - Projeto Spring Boot
+# APIRESTFULL - GEARVAULT
 
-Este é um projeto de demonstração construído com **Spring Boot** e configurado para usar o banco de dados **PostgreSQL**. Abaixo estão as instruções para configurar e executar o projeto localmente.
+Este é o Gearvault construído com **Spring Boot** e configurado para usar o banco de dados **PostgreSQL**. Abaixo estão as instruções para configurar e executar o projeto localmente.
 
 ---
 
